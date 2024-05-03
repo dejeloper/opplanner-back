@@ -7,5 +7,7 @@ services:
       POSTGRES_USER: dejeloper
       POSTGRES_PASSWORD: dejeloper123**
       POSTGRES_DB: opplanner_db
+    volumes:
+      - ./data:/var/lib/postgresql/data
     ports:
       - 5499:5432
