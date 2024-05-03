@@ -2,6 +2,7 @@
 /dist
 /node_modules
 /build
+/data
 
 # Logs
 logs
@@ -27,6 +28,9 @@ lerna-debug.log*
 *.launch
 .settings/
 *.sublime-workspace
+/.awcache 
+/.devcontainer   
+*.code-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -54,19 +58,6 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# dependencies
-node_modules/
-
-# IDE
-/.idea
-/.awcache
-/.vscode
-/.devcontainer
-/.classpath
-/.project
-/.settings 
-*.code-workspace
 
 # Vim
 [._]*.s[a-v][a-z]
