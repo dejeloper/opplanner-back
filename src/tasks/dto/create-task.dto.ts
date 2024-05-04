@@ -1,4 +1,10 @@
-import { IsBoolean, IsOptional, IsString, Length } from 'class-validator';
+import {
+  IsBoolean,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Length,
+} from 'class-validator';
 
 export class CreateTaskDto {
   @IsString({ message: 'El título debe ser un texto' })
@@ -14,6 +20,9 @@ export class CreateTaskDto {
   @IsString({ message: 'Las etiquetas deben ser un texto' })
   @IsOptional()
   tags?: string;
+
+  @IsNumber({}, { message: 'El estado de la tarea debe ser un número' })
+  taskStatus: number;
 
   @IsBoolean({ message: 'El estado debe ser un booleano' })
   @IsOptional()
