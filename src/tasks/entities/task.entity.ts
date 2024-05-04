@@ -1,3 +1,4 @@
+import { TaskStatus } from 'src/task-status/entities/task-status.entity';
 import {
   Entity,
   Column,
@@ -5,6 +6,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity()
@@ -21,6 +23,9 @@ export class Task {
 
   @Column()
   tags: string;
+
+  @ManyToOne(() => TaskStatus, (ts) => ts.id, { eager: true })
+  taskStatus: TaskStatus;
 
   @Column()
   status: boolean;
